@@ -1,14 +1,15 @@
 import Container from "@/components/Container";
 import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
+import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
 export default function Home() {
   return (
     <div>
-      <Container className="py-7 md:py-14 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col items-center gap-7 text-center">
+      <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="flex flex-col items-center md:items-start gap-5 text-center md:text-start">
           <div>
             <h3 className="font-semibold text-white/70 tracking-wider mb-1">
               Software Engineer
@@ -29,6 +30,7 @@ export default function Home() {
             Download cv <Download />
           </Button>
           <SocialLinks />
+          <Statistics />
         </div>
         <Photo />
       </Container>
