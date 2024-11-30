@@ -73,7 +73,10 @@ export default function ProjectSlider() {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="py-6 md:py-12"
     >
       <Container>

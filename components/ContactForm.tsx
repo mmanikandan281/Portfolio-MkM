@@ -13,8 +13,10 @@ import {
   SelectValue,
 } from "./ui/select";
 import SuccessMsg from "./SuccessMsg";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
+  const { toast } = useToast();
   const [status, setStatus] = useState("");
   const [success, setSuccess] = useState(false);
   const [isLoading, setLoading] = useState(false);
@@ -47,6 +49,15 @@ const ContactForm = () => {
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
+
+    if (!formData.Name.trim() || !formData.Email.trim()) {
+      toast({
+        title: "Error: Something is wrong",
+        description: "Please input your name and email to continue",
+        variant: "destructive",
+      });
+      return;
+    }
     const form = new FormData();
     const currentDateTime = new Date().toLocaleString();
     form.append("Name", formData.Name);
