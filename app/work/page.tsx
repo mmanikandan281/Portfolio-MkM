@@ -91,7 +91,7 @@ export default function ProjectSlider() {
           }}
         >
           <CarouselContent>
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <CarouselItem key={project.id}>
                 <Card className="bg-bodyColor border-lightSky/20">
                   <CardContent className="p-6">
