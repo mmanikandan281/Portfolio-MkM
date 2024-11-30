@@ -83,7 +83,12 @@ export default function ProjectSlider() {
             loop: true,
           }}
           className="w-full"
-          onSelect={(index: any) => handleSlideChange(index)}
+          onSelect={(event) => {
+            const index = 0;
+            if (typeof index === "number") {
+              handleSlideChange(index);
+            }
+          }}
         >
           <CarouselContent>
             {projects.map((project, index) => (
