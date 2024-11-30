@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
@@ -11,8 +12,79 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
+import SuccessMsg from "./SuccessMsg";
 
 const ContactForm = () => {
+  const [status, setStatus] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Phone: "",
+    Address: "",
+    Message: "",
+    Service: "",
+  });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSelectChange = (value: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      Service: value,
+    }));
+  };
+
+  const handleSubmit = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    const form = new FormData();
+    const currentDateTime = new Date().toLocaleString();
+    form.append("Name", formData.Name);
+    form.append("Email", formData.Email);
+    form.append("Phone", formData.Phone);
+    form.append("Address", formData.Address);
+    form.append("Message", formData.Message);
+    form.append("Service", formData.Service);
+    form.append("DateTime", currentDateTime);
+
+    try {
+      setLoading(true);
+      const response = await fetch("https://getform.io/f/azyyqokb", {
+        method: "POST",
+        body: form,
+      });
+
+      if (response.ok) {
+        setSuccess(true);
+        setStatus("Success! Your message has been sent.");
+        setFormData({
+          Name: "",
+          Email: "",
+          Phone: "",
+          Address: "",
+          Message: "",
+          Service: "",
+        });
+      } else {
+        setStatus("Error! Unable to send your message.");
+      }
+    } catch (error) {
+      console.error("Error!", error);
+      setStatus("Error! Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <form className="space-y-4">
       <h3 className="text-2xl md:text-4xl text-lightSky">
@@ -22,61 +94,84 @@ const ContactForm = () => {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil velit
         vel saepe fugiat ex aperiam, totam quae et tenetur deleniti.
       </p>
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col md:flex-row gap-4 items-center">
-          <Input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Firstname"
-          />
-          <Input type="text" id="name" name="name" placeholder="Lastname" />
-        </div>
+      <>
+        {success ? (
+          <SuccessMsg />
+        ) : (
+          <>
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <Input
+                  type="text"
+                  id="Name"
+                  name="Name"
+                  required
+                  placeholder="Your name"
+                  value={formData.Name}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="email"
+                  id="Email"
+                  name="Email"
+                  required
+                  placeholder="Email address"
+                  value={formData.Email}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div className="flex flex-col md:flex-row gap-4 items-center">
-          <Input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Email address"
-          />
-          <Input
-            type="text"
-            id="phone"
-            name="phone"
-            placeholder="Phone number"
-          />
-        </div>
+              <div className="flex flex-col md:flex-row gap-4 items-center">
+                <Input
+                  type="text"
+                  id="Phone"
+                  name="Phone"
+                  placeholder="Phone number"
+                  value={formData.Phone}
+                  onChange={handleChange}
+                />
+                <Input
+                  type="text"
+                  id="Address"
+                  name="Address"
+                  placeholder="Address"
+                  value={formData.Address}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <Textarea
-          id="message"
-          name="message"
-          rows={4}
-          required
-          placeholder="Your message"
-        />
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select a service" />
-          </SelectTrigger>
-          <SelectContent className="bg-bodyColor text-white border-white/20">
-            <SelectGroup>
-              <SelectLabel>Select a service</SelectLabel>
-              <SelectItem value="est">Web Development</SelectItem>
-              <SelectItem value="cst">UI/UX Design</SelectItem>
-              <SelectItem value="mst">Logo Design</SelectItem>
-            </SelectGroup>
-          </SelectContent>
-        </Select>
-      </div>
-      <Button
-        type="submit"
-        className="w-full py-4 bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/10 hover:border-lightSky hover:text-hoverColor hoverEffect"
-      >
-        Send Message
-      </Button>
+              <Textarea
+                name="Message"
+                placeholder="Text here"
+                value={formData.Message}
+                onChange={handleChange}
+                rows={5}
+              />
+              <Select onValueChange={handleSelectChange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select a service" />
+                </SelectTrigger>
+                <SelectContent className="bg-bodyColor text-white border-white/20">
+                  <SelectGroup>
+                    <SelectLabel>Select a service</SelectLabel>
+                    <SelectItem value="est">Web Development</SelectItem>
+                    <SelectItem value="cst">UI/UX Design</SelectItem>
+                    <SelectItem value="mst">Logo Design</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+            <Button
+              disabled={isLoading}
+              onClick={handleSubmit}
+              type="submit"
+              className="w-full py-4 bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/10 hover:border-lightSky hover:text-hoverColor hoverEffect"
+            >
+              {isLoading ? "Submitting message..." : "Send Message"}
+            </Button>
+          </>
+        )}
+      </>
     </form>
   );
 };
