@@ -1,14 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Logo";
 import Container from "./Container";
 import { NavbarData } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const pathname = usePathname();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <header className="border-b border-b-hoverColor/10 sticky top-0 z-50 bg-bodyColor">
@@ -38,10 +44,15 @@ const Header = () => {
             Hire me
           </Link>
         </div>
-        <div className="inline-flex md:hidden relative">
+        <button
+          className="inline-flex md:hidden relative"
+          onClick={toggleSidebar}
+          aria-label="Toggle menu"
+        >
           <Menu className="hover:text-hoverColor hoverEffect cursor-pointer" />
-        </div>
+        </button>
       </Container>
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </header>
   );
 };
