@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { motion } from "motion/react";
 
-const SuccessMsg = () => {
+const SuccessMsg = ({ status }: { status: string }) => {
   return (
     <motion.div
       initial={{ y: 40, opacity: 0 }}
@@ -15,7 +15,7 @@ const SuccessMsg = () => {
       <h2 className="text-4xl leading-none font-extrabold text-transparent text-outline">
         Thank You!
       </h2>
-      <p>Your form was submitted successfully.</p>
+      <p>{status}</p>
     </motion.div>
   );
 };

@@ -96,7 +96,7 @@ const ContactForm = () => {
       </p>
       <>
         {success ? (
-          <SuccessMsg />
+          <SuccessMsg status={status} />
         ) : (
           <>
             <div className="flex flex-col gap-4">
