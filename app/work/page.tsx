@@ -83,7 +83,7 @@ export default function ProjectSlider() {
             loop: true,
           }}
           className="w-full"
-          onSelect={(event) => {
+          onSelect={() => {
             const index = 0;
             if (typeof index === "number") {
               handleSlideChange(index);
