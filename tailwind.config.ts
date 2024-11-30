@@ -14,9 +14,9 @@ export default {
         sans: ["JetBrains Mono", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        bodyColor: "#001d3d",
-        lightSky: "#ffd60a",
-        hoverColor: "#ffc300",
+        bodyColor: "#1c1c22",
+        lightSky: "#00ff99",
+        hoverColor: "#00e187",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
