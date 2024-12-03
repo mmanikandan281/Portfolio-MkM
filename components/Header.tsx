@@ -25,7 +25,9 @@ const Header = () => {
             <Link
               key={item?.title}
               href={item?.link}
-              className="hover:text-hoverColor hoverEffect relative group overflow-x-hidden"
+              className={`hover:text-hoverColor hoverEffect relative group overflow-x-hidden ${
+                pathname === item?.link && "text-hoverColor"
+              }`}
             >
               {item?.title}
               <span
