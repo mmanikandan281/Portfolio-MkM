@@ -20,7 +20,11 @@ export default function Home() {
               John Doe
             </h1>
           </div>
-          <HomeDescripton />
+          <div className="w-full h-[120px] relative">
+            <div className="absolute top-0 left-0 w-full h-full">
+              <HomeDescripton />
+            </div>
+          </div>
           {/* <p className="w-auto md:max-w-[500px] text-white/50 font-thin leading-6">
             As a Software Engineer, I design and build innovative software
             solutions, solve complex problems, and ensure systems are scalable
