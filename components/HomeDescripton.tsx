@@ -15,7 +15,7 @@ const HomeDescripton = () => {
   }, []);
   return (
     <motion.p
-      className="w-auto font-normal leading-6 mb-6 min-h-30"
+      className="w-auto font-normal leading-7 mb-6 min-h-30"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 0.5 }}
@@ -26,7 +26,7 @@ const HomeDescripton = () => {
             key={index}
             initial={{ color: "rgb(156 163 175)" }}
             animate={{
-              color: isComplete ? "rgb(255 255 255)" : "rgb(156 163 175)",
+              color: isComplete ? "rgb(201 255 219)" : "rgb(156 163 175)",
             }}
             transition={{ duration: 0.5, delay: index * 0.03 }}
           >

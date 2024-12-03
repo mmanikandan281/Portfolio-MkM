@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col items-center md:items-start gap-5 text-center md:text-start">
+        <div className="flex flex-col items-center md:items-start gap-5 md:gap-7 text-center md:text-start">
           <div>
             <h3 className="font-semibold text-white/70 tracking-wider mb-1">
               Software Engineer
@@ -20,7 +20,7 @@ export default function Home() {
               John Doe
             </h1>
           </div>
-          <div className="w-full h-[120px] relative">
+          <div className="w-full h-[170px] md:h-[140px] relative">
             <div className="absolute top-0 left-0 w-full h-full">
               <HomeDescripton />
             </div>
