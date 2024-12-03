@@ -56,7 +56,12 @@ const Header = () => {
           <Menu className="hover:text-hoverColor hoverEffect cursor-pointer" />
         </button>
       </Container>
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <div className="md:hidden">
+        <Sidebar
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+        />
+      </div>
     </header>
   );
 };
