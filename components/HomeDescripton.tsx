@@ -26,7 +26,7 @@ const HomeDescripton = () => {
             key={index}
             initial={{ color: "rgb(156 163 175)" }}
             animate={{
-              color: isComplete ? "rgb(201 255 219)" : "rgb(156 163 175)",
+              color: isComplete ? "rgb(255 255 255)" : "rgb(156 163 175)",
             }}
             transition={{ duration: 0.5, delay: index * 0.03 }}
           >
