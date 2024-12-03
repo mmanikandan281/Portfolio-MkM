@@ -64,7 +64,7 @@ const EnhancedPhoto = () => {
               height={400}
               quality={100}
               className="object-contain w-full h-full"
-              priority
+              priority={true}
             />
           </div>
         </motion.div>
