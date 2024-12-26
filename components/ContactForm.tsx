@@ -75,25 +75,25 @@ const ContactForm = () => {
         description:
           "You have finished 50/50 message sent limit from getform. Please enable pro mode to continue",
       });
-      // const response = await fetch("https://getform.io/f/azyyqokb", {
-      //   method: "POST",
-      //   body: form,
-      // });
+      const response = await fetch("", {
+        method: "POST",
+        body: form,
+      });
 
-      // if (response.ok) {
-      //   setSuccess(true);
-      //   setStatus("Success! Your message has been sent.");
-      //   setFormData({
-      //     Name: "",
-      //     Email: "",
-      //     Phone: "",
-      //     Address: "",
-      //     Message: "",
-      //     Service: "",
-      //   });
-      // } else {
-      //   setStatus("Error! Unable to send your message.");
-      // }
+      if (response.ok) {
+        setSuccess(true);
+        setStatus("Success! Your message has been sent.");
+        setFormData({
+          Name: "",
+          Email: "",
+          Phone: "",
+          Address: "",
+          Message: "",
+          Service: "",
+        });
+      } else {
+        setStatus("Error! Unable to send your message.");
+      }
     } catch (error) {
       console.error("Error!", error);
       setStatus("Error! Something went wrong.");
