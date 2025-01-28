@@ -1,10 +1,11 @@
 import Container from "@/components/Container";
-import HomeDescripton from "@/components/HomeDescripton";
+import HomeDescription from "@/components/HomeDescription";
 import Photo from "@/components/Photo";
 import SocialLinks from "@/components/SocialLinks";
 import Statistics from "@/components/Statistics";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
           </div>
           <div className="w-full h-[170px] md:h-[140px] relative">
             <div className="absolute top-0 left-0 w-full h-full">
-              <HomeDescripton />
+              <HomeDescription />
             </div>
           </div>
           {/* <p className="w-auto md:max-w-[500px] text-white/50 font-thin leading-6">
@@ -33,7 +34,15 @@ export default function Home() {
           </p> */}
 
           <Button className="bg-transparent rounded-full border border-lightSky/50 text-lightSky hover:bg-hoverColor hover:text-black hoverEffect">
-            Download cv <Download />
+            <Link
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="flex items-center gap-1"
+            >
+              Download cv <Download />
+            </Link>
           </Button>
           <SocialLinks />
           <Statistics />
