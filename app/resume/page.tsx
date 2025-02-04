@@ -172,13 +172,13 @@ export default function ResumePage() {
             defaultValue="internships"
             className="w-full flex flex-col md:flex-row gap-6 md:gap-10"
           >
-            {/* Enhanced Tabs Navigation with horizontal scroll */}
-            <TabsList className="flex md:flex-col h-full bg-transparent md:w-64 gap-4 overflow-x-auto md:overflow-visible px-2 md:px-0">
+            {/* Tabs Navigation */}
+            <TabsList className="flex md:flex-col h-full bg-transparent md:w-64 gap-4">
               {tabMenu.map((item) => (
                 <TabsTrigger
                   key={item.value}
                   value={item.value}
-                  className="bg-white/10 w-full py-2.5 text-white hover:bg-lightSky/50 text-xs sm:text-sm flex-shrink-0 md:flex-shrink"
+                  className="bg-white/10 w-full py-2.5 text-white hover:bg-lightSky/50 text-xs sm:text-sm"
                 >
                   <div className="flex items-center gap-1.5">
                     <item.icon className="w-4 h-4 md:w-5 md:h-5" />
@@ -188,8 +188,8 @@ export default function ResumePage() {
               ))}
             </TabsList>
 
-            {/* Content Section with responsive height */}
-            <div className="flex-1">
+            {/* Tabs Content */}
+            <div className="flex-1 min-h-[400px]">
               {/* Internships Tab */}
               <TabsContent value="internships">
                 <motion.h2
@@ -331,7 +331,9 @@ export default function ResumePage() {
                   <p className="mb-6 text-lg">{tabContent.about.bio}</p>
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Interests</h3>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Interests
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {tabContent.about.interests.map((interest, i) => (
                           <Badge key={i} variant="secondary">
@@ -341,7 +343,9 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Languages</h3>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Languages
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {tabContent.about.languages.map((language, i) => (
                           <Badge key={i} variant="secondary">
