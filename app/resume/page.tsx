@@ -11,7 +11,7 @@ const tabMenu = [
   { title: "Education", value: "education", icon: GraduationCap },
   { title: "Skills", value: "skills", icon: Code2 },
   { title: "About me", value: "about", icon: User },
-  { title: "Certificates", value: "certificates", icon: Code2 }, // Added Certificates
+  { title: "Certificates", value: "certificates", icon: Code2 },
 ];
 
 const tabContent = {
@@ -23,8 +23,14 @@ const tabContent = {
         company: "Teachnook (ORBO)",
         period: "Summer 2024",
         description:
-          "During my internship at Teachnook, I gained hands-on experience in data science, focusing on exploratory data analysis (EDA), regression modeling, and classification modeling. I mastered data visualization, fine-tuned regression models, and designed accurate classification models through feature selection. This internship equipped me with valuable data science skills for future projects.",
-        highlights: ["Data Science", "Exploratory Data Analysis", "Regression Modeling", "Classification Modeling", "Feature Selection"],
+          "During my internship at Teachnook, I gained hands-on experience in data science, focusing on exploratory data analysis (EDA), regression modeling, and classification modeling. I mastered data visualization, fine-tuned regression models, and designed accurate classification models through feature selection.",
+        highlights: [
+          "Data Science",
+          "Exploratory Data Analysis",
+          "Regression Modeling",
+          "Classification Modeling",
+          "Feature Selection",
+        ],
       },
     ],
   },
@@ -35,16 +41,16 @@ const tabContent = {
         degree: "Master of Computer Application",
         institution: "University of Calicut",
         period: "Sep 2024 - Present",
-        description: "Currently pursuing Master of Computer Application (MCA) from Lead College of Management.",
-        achievements: []
+        description:
+          "Currently pursuing Master of Computer Application (MCA) from Lead College of Management.",
+        achievements: [],
       },
-      
       {
         degree: "Bachelor of Computer Application",
         institution: "University of Calicut",
         period: "Aug 2021 - April 2024",
         description:
-          "Completed Bachelor of computer application from sadanam kumaran college.",
+          "Completed Bachelor of Computer Application from Sadanam Kumaran College.",
         achievements: ["84.4%"],
       },
       {
@@ -70,7 +76,7 @@ const tabContent = {
       {
         name: "Frontend Development",
         description:
-          "Experienced in building responsive and interactive user interfaces using modern frontend technologies. Skilled in translating design concepts into functional applications with a focus on performance and user experience. Proficient in JavaScript frameworks like React , ensuring optimal performance and scalability of web applications",
+          "Experienced in building responsive and interactive user interfaces using modern frontend technologies. Skilled in translating design concepts into functional applications with a focus on performance and user experience.",
         skills: [
           "React",
           "Html & Css",
@@ -82,22 +88,27 @@ const tabContent = {
       {
         name: "Machine Learning Model Development",
         description:
-          "Focused on designing, training, and deploying machine learning models. Experienced in data preprocessing, model evaluation, and optimization techniques for various tasks including regression, classification, and clustering.",
-        skills: ["Python", "TensorFlow", "Opencv", "Seaborn", "Pandas", "NumPy"],
+          "Focused on designing, training, and deploying machine learning models. Experienced in data preprocessing, model evaluation, and optimization techniques.",
+        skills: [
+          "Python",
+          "TensorFlow",
+          "Opencv",
+          "Seaborn",
+          "Pandas",
+          "NumPy",
+        ],
       },
-      
       {
         name: "Tools & Others",
         description:
-          "Experienced in utilizing various platforms and tools to enhance productivity, collaborate on open-source projects, and solve complex problems. Active on GitHub for code repositories, Kaggle for data science challenges, and HackerRank for practicing coding skills.",
+          "Experienced in utilizing various platforms and tools to enhance productivity and collaborate on projects.",
         skills: ["Git", "HackerRank", "LinkedIn", "Kaggle"],
       },
-      
     ],
   },
   about: {
     title: "About Me",
-    bio: "I am a passionate machine learning and front-end developer with a strong foundation in building innovative solutions. With hands-on experience in developing user-centric web applications using modern frontend technologies like React and Javascript, and expertise in designing and deploying machine learning models, I am dedicated to pushing the boundaries of technology. I am constantly exploring new tools and frameworks, aiming to deliver high-quality, efficient, and scalable solutions.",
+    bio: "I am a passionate machine learning and front-end developer with a strong foundation in building innovative solutions. I have hands-on experience in developing user-centric web applications using modern frontend technologies like React and JavaScript, and expertise in designing and deploying machine learning models.",
     interests: [
       "Machine Learning",
       "Frontend Development",
@@ -106,38 +117,43 @@ const tabContent = {
     ],
     languages: ["Malayalam (Native)", "English (Fluent)"],
   },
-  certificates: { // Added section for certificates
+  certificates: {
     title: "Certificates",
     items: [
       {
         certificate: "Certificate of Internship Completion",
         institution: "ORBO",
         period: "May 2023",
-        description: "Completed an internship focusing on data science, with an emphasis on exploratory data analysis, regression modeling, and classification modeling.",
+        description:
+          "Completed an internship focusing on data science, with an emphasis on exploratory data analysis, regression modeling, and classification modeling.",
       },
       {
         certificate: "Python Basics",
         institution: "Zanx",
         period: "June 2023",
-        description: "A foundational course on Python programming, covering syntax, data structures, and basic libraries.",
+        description:
+          "A foundational course on Python programming, covering syntax, data structures, and basic libraries.",
       },
       {
         certificate: "Python Programming",
         institution: "Kaggle",
         period: "June 2023",
-        description: "An intermediate course on Python programming that covers advanced topics like OOP and working with libraries.",
+        description:
+          "An intermediate course on Python programming covering advanced topics like OOP and libraries.",
       },
       {
         certificate: "Pandas",
         institution: "Kaggle",
         period: "December 2022",
-        description: "A certification focused on using the Pandas library for data manipulation, analysis, and data cleaning.",
+        description:
+          "A certification focused on using the Pandas library for data manipulation and cleaning.",
       },
       {
         certificate: "Intro to Machine Learning",
         institution: "Kaggle",
         period: "December 2022",
-        description: "Introduction to machine learning techniques including supervised and unsupervised learning, algorithms, and model evaluation.",
+        description:
+          "Introduction to machine learning techniques including supervised and unsupervised learning.",
       },
     ],
   },
@@ -149,31 +165,32 @@ export default function ResumePage() {
       <Container>
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-          }}
+          animate={{ opacity: 1, transition: { duration: 0.4 } }}
           className="w-full"
         >
           <Tabs
             defaultValue="internships"
             className="w-full flex flex-col md:flex-row gap-6 md:gap-10"
           >
+            {/* Tabs Navigation */}
             <TabsList className="flex md:flex-col h-full bg-transparent md:w-64 gap-4">
               {tabMenu.map((item) => (
                 <TabsTrigger
                   key={item.value}
                   value={item.value}
-                  className="bg-white/10 w-full py-2.5 text-white data-[state=active]:bg-hoverColor hover:bg-lightSky/50 text-xs sm:text-sm"
+                  className="bg-white/10 w-full py-2.5 text-white hover:bg-lightSky/50 text-xs sm:text-sm"
                 >
-                  <div className="flex items-center gap-1.5 md:w-[50%] md:gap-3">
-                    <item.icon className="w-4 h-4 md:h-5 md:w-5" />
+                  <div className="flex items-center gap-1.5">
+                    <item.icon className="w-4 h-4 md:w-5 md:h-5" />
                     {item.title}
                   </div>
                 </TabsTrigger>
               ))}
             </TabsList>
+
+            {/* Tabs Content */}
             <div className="flex-1 min-h-[400px]">
+              {/* Internships Tab */}
               <TabsContent value="internships">
                 <motion.h2
                   initial={{ opacity: 0 }}
@@ -215,6 +232,8 @@ export default function ResumePage() {
                   ))}
                 </div>
               </TabsContent>
+
+              {/* Education Tab */}
               <TabsContent value="education">
                 <motion.h2
                   initial={{ opacity: 0 }}
@@ -258,6 +277,8 @@ export default function ResumePage() {
                   ))}
                 </div>
               </TabsContent>
+
+              {/* Skills Tab */}
               <TabsContent value="skills">
                 <motion.h2
                   initial={{ opacity: 0 }}
@@ -292,6 +313,8 @@ export default function ResumePage() {
                   ))}
                 </div>
               </TabsContent>
+
+              {/* About Me Tab */}
               <TabsContent value="about">
                 <motion.h2
                   initial={{ opacity: 0 }}
@@ -308,7 +331,9 @@ export default function ResumePage() {
                   <p className="mb-6 text-lg">{tabContent.about.bio}</p>
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Interests</h3>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Interests
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {tabContent.about.interests.map((interest, i) => (
                           <Badge key={i} variant="secondary">
@@ -318,7 +343,9 @@ export default function ResumePage() {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Languages</h3>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Languages
+                      </h3>
                       <div className="flex flex-wrap gap-2">
                         {tabContent.about.languages.map((language, i) => (
                           <Badge key={i} variant="secondary">
@@ -330,6 +357,8 @@ export default function ResumePage() {
                   </div>
                 </motion.div>
               </TabsContent>
+
+              {/* Certificates Tab */}
               <TabsContent value="certificates">
                 <motion.h2
                   initial={{ opacity: 0 }}
@@ -349,7 +378,9 @@ export default function ResumePage() {
                     >
                       <div className="flex justify-between items-start mb-4">
                         <div>
-                          <h3 className="text-lg font-semibold">{item.certificate}</h3>
+                          <h3 className="text-lg font-semibold">
+                            {item.certificate}
+                          </h3>
                           <p className="text-muted-foreground">
                             {item.institution}
                           </p>
