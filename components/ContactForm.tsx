@@ -170,8 +170,8 @@ const ContactForm = () => {
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
                     <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/UX Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectItem value="cst">Frontend Development</SelectItem>
+                    <SelectItem value="mst">Machine Learning Model Development</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
