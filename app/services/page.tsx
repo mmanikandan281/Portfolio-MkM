@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import Link from "next/link";
 
-const ServicesPage = () => {
+const servicesPage = () => {
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-5 md:py-10 text-white">
       <Container>
@@ -17,7 +17,7 @@ const ServicesPage = () => {
             transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
           }}
         >
-          <Title>Services I Provide</Title>
+          <Title>services I Provide</Title>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12">
             {servicesData?.map((item) => (
               <div
@@ -47,4 +47,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default servicesPage;

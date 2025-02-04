@@ -7,31 +7,24 @@ import { Calendar, GraduationCap, Briefcase, Code2, User } from "lucide-react";
 import Container from "@/components/Container";
 
 const tabMenu = [
-  { title: "Experience", value: "experience", icon: Briefcase },
+  { title: "Internships", value: "internships", icon: Briefcase },
   { title: "Education", value: "education", icon: GraduationCap },
   { title: "Skills", value: "skills", icon: Code2 },
   { title: "About me", value: "about", icon: User },
+  { title: "Certificates", value: "certificates", icon: Code2 }, // Added Certificates
 ];
 
 const tabContent = {
-  experience: {
-    title: "Professional Experience",
+  internships: {
+    title: "Internships",
     items: [
       {
-        role: "Senior Frontend Developer",
-        company: "Tech Solutions Inc.",
-        period: "2021 - Present",
+        role: "Data Science Intern",
+        company: "Teachnook (ORBO)",
+        period: "Summer 2024",
         description:
-          "Led the development of multiple React-based web applications, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.",
-        highlights: ["React", "Next.js", "TypeScript", "Team Leadership"],
-      },
-      {
-        role: "Full Stack Developer",
-        company: "Digital Innovations Ltd",
-        period: "2018 - 2021",
-        description:
-          "Developed and maintained full-stack applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver high-quality solutions.",
-        highlights: ["Node.js", "React", "MongoDB", "AWS"],
+          "During my internship at Teachnook, I gained hands-on experience in data science, focusing on exploratory data analysis (EDA), regression modeling, and classification modeling. I mastered data visualization, fine-tuned regression models, and designed accurate classification models through feature selection. This internship equipped me with valuable data science skills for future projects.",
+        highlights: ["Data Science", "Exploratory Data Analysis", "Regression Modeling", "Classification Modeling", "Feature Selection"],
       },
     ],
   },
@@ -39,20 +32,35 @@ const tabContent = {
     title: "Educational Background",
     items: [
       {
-        degree: "Master of Computer Science",
-        institution: "Tech University",
-        period: "2016 - 2018",
+        degree: "Master of Computer Application",
+        institution: "University of Calicut",
+        period: "Sep 2024 - Present",
+        description: "Currently pursuing Master of Computer Application (MCA) from Lead College of Management.",
+        achievements: []
+      },
+      
+      {
+        degree: "Bachelor of Computer Application",
+        institution: "University of Calicut",
+        period: "Aug 2021 - April 2024",
         description:
-          "Specialized in Software Engineering and Artificial Intelligence. Graduated with honors.",
-        achievements: ["4.0 GPA", "Research Publication", "Dean's List"],
+          "Completed Bachelor of computer application from sadanam kumaran college.",
+        achievements: ["84.4%"],
       },
       {
-        degree: "Bachelor of Computer Science",
-        institution: "State University",
-        period: "2012 - 2016",
+        degree: "Higher Secondary Education",
+        institution: "KANNADI HSS, Palakkad",
+        period: "July 2019 - March 2021",
         description:
-          "Foundation in computer science principles, data structures, and algorithms.",
-        achievements: ["Academic Excellence Award", "Programming Club Lead"],
+          "Completed higher secondary education with a focus on Computer Science.",
+        achievements: ["89%"],
+      },
+      {
+        degree: "SSLC Education",
+        institution: "Bhavans Vidhya Mandir, Chithali",
+        period: "June 2018 - March 2019",
+        description: "Completed SSLC education.",
+        achievements: ["69%"],
       },
     ],
   },
@@ -62,39 +70,76 @@ const tabContent = {
       {
         name: "Frontend Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
+          "Experienced in building responsive and interactive user interfaces using modern frontend technologies. Skilled in translating design concepts into functional applications with a focus on performance and user experience. Proficient in JavaScript frameworks like React , ensuring optimal performance and scalability of web applications",
         skills: [
           "React",
-          "Next.js",
+          "Html & Css",
           "TypeScript",
           "Tailwind CSS",
-          "Framer Motion",
+          "Javascript",
         ],
       },
       {
-        name: "Backend Development",
+        name: "Machine Learning Model Development",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Node.js", "Express", "Python", "PostgreSQL", "MongoDB"],
+          "Focused on designing, training, and deploying machine learning models. Experienced in data preprocessing, model evaluation, and optimization techniques for various tasks including regression, classification, and clustering.",
+        skills: ["Python", "TensorFlow", "Opencv", "Seaborn", "Pandas", "NumPy"],
       },
+      
       {
         name: "Tools & Others",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, distinctio. Quas fugiat nesciunt ipsum. Voluptatem inventore iste labore, similique quod laudantium rerum dolor, impedit voluptas distinctio praesentium quibusdam veniam tempore. Laudantium repellendus possimus adipisci maxime.",
-        skills: ["Git", "Docker", "AWS", "CI/CD", "Agile Methodologies"],
+          "Experienced in utilizing various platforms and tools to enhance productivity, collaborate on open-source projects, and solve complex problems. Active on GitHub for code repositories, Kaggle for data science challenges, and HackerRank for practicing coding skills.",
+        skills: ["Git", "HackerRank", "LinkedIn", "Kaggle"],
       },
+      
     ],
   },
   about: {
     title: "About Me",
-    bio: "Passionate software developer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-centric design and accessibility.",
+    bio: "I am a passionate machine learning and front-end developer with a strong foundation in building innovative solutions. With hands-on experience in developing user-centric web applications using modern frontend technologies like React and Javascript, and expertise in designing and deploying machine learning models, I am dedicated to pushing the boundaries of technology. I am constantly exploring new tools and frameworks, aiming to deliver high-quality, efficient, and scalable solutions.",
     interests: [
-      "Open Source Contributing",
-      "Tech Blogging",
-      "UI/UX Design",
       "Machine Learning",
+      "Frontend Development",
+      "Data Science",
+      "Tech Blogging",
     ],
-    languages: ["English (Native)", "Spanish (Intermediate)", "German (Basic)"],
+    languages: ["Malayalam (Native)", "English (Fluent)"],
+  },
+  certificates: { // Added section for certificates
+    title: "Certificates",
+    items: [
+      {
+        certificate: "Certificate of Internship Completion",
+        institution: "ORBO",
+        period: "May 2023",
+        description: "Completed an internship focusing on data science, with an emphasis on exploratory data analysis, regression modeling, and classification modeling.",
+      },
+      {
+        certificate: "Python Basics",
+        institution: "Zanx",
+        period: "June 2023",
+        description: "A foundational course on Python programming, covering syntax, data structures, and basic libraries.",
+      },
+      {
+        certificate: "Python Programming",
+        institution: "Kaggle",
+        period: "June 2023",
+        description: "An intermediate course on Python programming that covers advanced topics like OOP and working with libraries.",
+      },
+      {
+        certificate: "Pandas",
+        institution: "Kaggle",
+        period: "December 2022",
+        description: "A certification focused on using the Pandas library for data manipulation, analysis, and data cleaning.",
+      },
+      {
+        certificate: "Intro to Machine Learning",
+        institution: "Kaggle",
+        period: "December 2022",
+        description: "Introduction to machine learning techniques including supervised and unsupervised learning, algorithms, and model evaluation.",
+      },
+    ],
   },
 };
 
@@ -111,7 +156,7 @@ export default function ResumePage() {
           className="w-full"
         >
           <Tabs
-            defaultValue="experience"
+            defaultValue="internships"
             className="w-full flex flex-col md:flex-row gap-6 md:gap-10"
           >
             <TabsList className="flex md:flex-col h-full bg-transparent md:w-64 gap-4">
@@ -129,16 +174,16 @@ export default function ResumePage() {
               ))}
             </TabsList>
             <div className="flex-1 min-h-[400px]">
-              <TabsContent value="experience">
+              <TabsContent value="internships">
                 <motion.h2
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="text-2xl font-bold mb-6 text-lightSky"
                 >
-                  {tabContent.experience.title}
+                  {tabContent.internships.title}
                 </motion.h2>
                 <div className="space-y-6">
-                  {tabContent.experience.items.map((item, index) => (
+                  {tabContent.internships.items.map((item, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -284,6 +329,40 @@ export default function ResumePage() {
                     </div>
                   </div>
                 </motion.div>
+              </TabsContent>
+              <TabsContent value="certificates">
+                <motion.h2
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-2xl font-bold mb-6 text-lightSky"
+                >
+                  {tabContent.certificates.title}
+                </motion.h2>
+                <div className="space-y-6">
+                  {tabContent.certificates.items.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="border rounded-lg border-lightSky/20 p-6"
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-lg font-semibold">{item.certificate}</h3>
+                          <p className="text-muted-foreground">
+                            {item.institution}
+                          </p>
+                        </div>
+                        <div className="flex items-center text-muted-foreground">
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {item.period}
+                        </div>
+                      </div>
+                      <p className="mb-4">{item.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </TabsContent>
             </div>
           </Tabs>

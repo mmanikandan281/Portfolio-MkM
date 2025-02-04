@@ -14,11 +14,11 @@ export default function Home() {
         <div className="flex flex-col items-center md:items-start gap-5 md:gap-7 text-center md:text-start">
           <div>
             <h3 className="font-semibold text-white/70 tracking-wider mb-1">
-              Software Engineer
+            ML &  Front-End Engineer
             </h3>
             <h2 className="text-3xl md:text-5xl mb-2">Hello I&apos;m</h2>
             <h1 className="text-lightSky text-5xl md:text-7xl tracking-normal">
-              John Doe
+              Manikandan M
             </h1>
           </div>
           <div className="w-full h-[170px] md:h-[140px] relative">

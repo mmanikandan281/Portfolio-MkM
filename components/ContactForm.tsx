@@ -107,9 +107,8 @@ const ContactForm = () => {
         Let&apos;s work together
       </h3>
       <p className="text-white/60 text-sm md:text-base">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil velit
-        vel saepe fugiat ex aperiam, totam quae et tenetur deleniti.
-      </p>
+      I’m passionate about turning ideas into reality. If you’re looking for innovative solutions or want to collaborate on exciting projects, I’d love to work with you. Let’s create something amazing together!
+     </p>
       <>
         {success ? (
           <SuccessMsg status={status} />

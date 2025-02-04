@@ -25,42 +25,130 @@ import Container from "@/components/Container";
 import projectOne from "@/images/projectOne.png";
 import projectTwo from "@/images/projectTwo.png";
 import projectThree from "@/images/projectThree.png";
+import Projectfour from "@/images/Projectfour.png";
+import Projectfive from "@/images/Projectfive.png";
+import Projectsix from "@/images/Projectsix.png";
+import projectseven from "@/images/projectseven.png";
+import projecteight from "@/images/projecteight.png";
+import projectnine from "@/images/projectnine.png";
+import projectten from "@/images/projectten.png";
+
 
 // Dummy data for projects
 const projects = [
+
   {
     id: "01",
-    title: "E-commerce Platform",
-    category: "Full Stack",
+    title: "Lumos Learning App",
+    category: "Lumos Learning App",
     description:
-      "A modern e-commerce platform built with Next.js, featuring a responsive design, user authentication, and integration with a headless CMS for easy content management.",
-    stack: ["Next.js", "Tailwind CSS", "Strapi", "PostgreSQL"],
-    image: projectOne,
-    liveUrl: "https://example-ecommerce.com",
-    githubUrl: "https://github.com/example/ecommerce",
+      "The Lumos Learning App is designed for CP (Cognitive and Physical) students to make learning the English alphabet fun and interactive. The app combines visual animations, auditory cues, and a responsive drawing canvas to create an engaging experience for children.",
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "HTML5", "Vercel"],
+    image: projectOne, // Replace with the actual image path
+    liveUrl: "https://lumos-learning-app.vercel.app",
+    githubUrl: "https://github.com/mmanikandan281/Lumos-Learning-App",
   },
   {
     id: "02",
-    title: "Task Management App",
+    title: "MkM Shopping",
     category: "Frontend",
     description:
-      "A sleek task management application that helps users organize their daily activities, set priorities, and track progress. Built with React and Redux for state management.",
-    stack: ["React", "Redux", "Styled Components", "Firebase"],
-    image: projectTwo,
-    liveUrl: "https://example-taskmanager.com",
-    githubUrl: "https://github.com/example/taskmanager",
+      "MkM Shopping is a modern e-commerce platform built with React.js, offering a seamless and responsive design. It includes user authentication, shopping cart functionality, and an integration with a headless CMS for easy content management. The platform provides a smooth shopping experience and supports dynamic product display with fast load times.",
+    stack: ["React.js", "Tailwind CSS", "Javascript"],
+    image: projectThree, // Replace with the actual image path
+    liveUrl: "https://mkm-shopping.vercel.app/", // Replace with the actual live URL
+    githubUrl: "https://github.com/mmanikandan281/mkm-shopping", // Replace with your GitHub repository URL
   },
+
+  
   {
     id: "03",
-    title: "Weather Forecast Dashboard",
+    title: "E commerce Website",
     category: "Frontend",
     description:
-      "An interactive weather forecast dashboard that provides real-time weather information and 5-day forecasts for multiple locations. Utilizes a third-party weather API.",
-    stack: ["Vue.js", "Vuex", "Chart.js", "OpenWeatherMap API"],
-    image: projectThree,
-    liveUrl: "https://example-weatherapp.com",
-    githubUrl: "https://github.com/example/weatherapp",
+      "This is a fully functional eCommerce website built using React. The application allows users to browse products, view details, manage a shopping cart, and apply theme changes. The project utilizes React Router for navigation, Bootstrap for responsive design, and integrates a context API for theme management.",
+    stack: ["React.js", "Css", "Javascript"],
+    image: projectTwo,
+    liveUrl: "https://github.com/mmanikandan281/E-commerce-website",
+    githubUrl: "https://github.com/mmanikandan281/E-commerce-website",
   },
+  
+    {
+      id: "04",
+      title: "Tic Tac Toe",
+      category: "Game",
+      description:
+        "A classic Tic Tac Toe game built using React and CSS. Two players take turns marking a 3x3 grid with X or O. The first to align three marks in a row, column, or diagonal wins. The game features a simple, interactive UI for an engaging experience.",
+      stack: ["React.js", "CSS"],
+      image: Projectfour,
+      liveUrl: "https://github.com/mmanikandan281/Tic-Tac-Toe",
+      githubUrl: "https://github.com/mmanikandan281/Tic-Tac-Toe",
+  },
+    {
+      id: "05",
+      title: "Intelligent Pothole Detection System",
+      category: "Machine Learning",
+      description:
+        "Utilizes computer vision and machine learning for real-time pothole detection via webcams. Provides efficient and cost-effective monitoring, aiding timely road repairs through cloud-based reporting for agencies.",
+      stack: ["TensorFlow Lite", "OpenCV", "Python"],
+      image: Projectfive,
+      liveUrl: "https://github.com/mmanikandan281/Intelligent-Pothole-Detection",
+      githubUrl: "https://github.com/mmanikandan281/Intelligent-Pothole-Detection-System",
+},
+{
+    id: "06",
+    title: "AI-Based Fire Detection System",
+    category: "Deep Learning",
+    description:
+      "A Python-based deep learning project that uses a Convolutional Neural Network (CNN) for fire detection in images. It serves as a supplementary tool to traditional fire detection systems by leveraging TensorFlow, Keras, and OpenCV for image processing and classification.",
+    stack: ["Python", "TensorFlow", "Keras", "OpenCV", "NumPy", "Pillow"],
+    image: Projectsix,
+    liveUrl: "https://github.com/mmanikandan281/Fire-Detection",
+    githubUrl: "https://github.com/mmanikandan281/Fire-Detection",
+},
+{
+  id: "07",
+  title: "Sign Language Detection Model",
+  category: "Deep Learning",
+  description:
+    "A real-time sign language detection system using YOLOv8 for object detection. The model is trained on a custom dataset from Roboflow and deployed for real-time recognition via a webcam, leveraging OpenCV and Ultralytics YOLO.",
+  stack: ["Python", "YOLOv8", "Roboflow", "OpenCV", "Ultralytics"],
+  image: projectseven,
+  liveUrl: "https://github.com/mmanikandan281/Sign-Language-Detection",
+  githubUrl: "https://github.com/mmanikandan281/Sign-Language-Detection",
+},
+{
+  id: "08",
+  title: "Music Player Using Python",
+  category: "Python",
+  description:
+    "A minimalistic music player with a GUI inspired by the classic iPod interface. The player allows users to play, pause, stop, and navigate through songs seamlessly.",
+  stack: ["Python", "Pygame", "Tkinter"],
+  image: projecteight,
+  liveUrl: "https://github.com/mmanikandan281/MUSIC-PLAYER-USING-PYTHON",
+  githubUrl: "https://github.com/mmanikandan281/MUSIC-PLAYER-USING-PYTHON",
+},
+{
+  id: "09",
+  title: "Speech-to-Text and Text Summarization",
+  category: "Natural Language Processing",
+  description: "This project leverages OpenAI's Whisper API for transcribing speech (audio files) to text and GPT-3.5-turbo for summarizing the transcribed text. It's implemented in Python and designed for use in Google Colab.",
+  stack: ["Python", "OpenAI Whisper", "GPT-3.5", "Google Colab"],
+  image: projectnine,
+  liveUrl: "https://colab.research.google.com/drive/1lNx2Qgk3kVOGHjjGrJhYgYkLD61DiXFY?usp=drive_link",
+  githubUrl: "https://github.com/mmanikandan281/Speech-To-Text",
+},
+{
+  id: "10",
+  title: "Titanic Survival Prediction using Logistic Regression",
+  category: "Data Analytics",
+  description: "This project uses the Titanic dataset for classification, predicting survival or deceased using Logistic Regression in Python.",
+  stack: ["Python", "Logistic Regression", "pandas", "matplotlib", "seaborn"],
+  image: projectten,
+  liveUrl: "https://colab.research.google.com/drive/1vaPSGJhmPId-B_pdapQsDMkDAzJcSKeA?usp=drive_link",
+  githubUrl: "https://github.com/mmanikandan281/Datascience-Analyzer"
+}
+
 ];
 
 export default function ProjectSlider() {
