@@ -8,7 +8,7 @@ const infoData = [
   { title: "Email", description: "mmanikandan281@gmail.com", icon: <Mail /> },
   {
     title: "Address",
-    description: "Kodaikkattil Nair Veedu Pilapully, Palakkad, Kerala",
+    description: "Palakkad, Kerala",
     icon: <MapPinCheck />,
   },
 ];
