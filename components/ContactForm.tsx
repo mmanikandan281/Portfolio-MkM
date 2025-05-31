@@ -62,18 +62,6 @@ const ContactForm = () => {
 
     const currentDateTime = new Date().toLocaleString();
 
-    // Option 1: Using EmailJS (Recommended)
-    const emailJSData = {
-      from_name: formData.Name,
-      from_email: formData.Email,
-      phone: formData.Phone,
-      address: formData.Address,
-      message: formData.Message,
-      service: formData.Service,
-      datetime: currentDateTime,
-      to_email: "manioyassco@gmail.com"
-    };
-
     try {
       setLoading(true);
       
@@ -133,7 +121,7 @@ const ContactForm = () => {
         Let&apos;s work together
       </h3>
       <p className="text-white/60 text-sm md:text-base">
-        I'm passionate about turning ideas into reality. If you're looking for innovative solutions or want to collaborate on exciting projects, I'd love to work with you. Let's create something amazing together!
+        I&apos;m passionate about turning ideas into reality. If you&apos;re looking for innovative solutions or want to collaborate on exciting projects, I&apos;d love to work with you. Let&apos;s create something amazing together!
       </p>
       <>
         {success ? (
