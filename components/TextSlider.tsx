@@ -10,13 +10,14 @@ const TextSlider = () => {
     "UI/UX Designer",
   ];
 
+// ✅ fixed
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % textItems.length);
-    }, 2000); // Interval for each slide (2 seconds)
+    }, 2000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  }, []);
+    return () => clearInterval(interval); // 👈 also add this cleanup!
+  }, [textItems.length]);
 
   return (
     <div className="relative overflow-hidden h-[30px] w-full flex items-center">

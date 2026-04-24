@@ -5,9 +5,7 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, GraduationCap, Briefcase, Code2, User, Award } from "lucide-react";
 import Container from "@/components/Container";
-import { describe } from "node:test";
-import { Certificate } from "crypto";
-import { Description } from "@radix-ui/react-toast";
+
 
 const tabMenu = [
   { title: "Internships", value: "internships", icon: Briefcase },
