@@ -38,6 +38,8 @@ import projectrecipe from "@/images/projectrecipe.png";
 import projectgame from "@/images/projectgame.png";
 import projecthunt from "@/images/projecthunt.png";
 import projectnews from "@/images/projectnews.png";
+import projectIdam from "@/images/projectIdam.png";
+import projectJob from "@/images/projectJob.png"; 
 
 // Dummy data for projects
 const projects = [
@@ -65,6 +67,38 @@ const projects = [
   },
   {
     id: "03",
+    title : "Job Agent",
+    category: "AI-Powered Job Application Automation",
+    description : "Job Agent is a personal AI tool that automates the entire job application process — it parses job descriptions, intelligently matches the best resume from your collection, and generates tailored professional emails using Groq AI. Built with React, FastAPI, and Gmail API, it sends applications directly from your Gmail with the matched resume attached in one click.",
+    stack : ["React.js", "FastAPI", "Python", "Groq AI", "FAISS", "Gmail API"],
+    image: projectJob,
+    liveUrl: "https://github.com/mmanikandan281/Job-agent",
+    githubUrl: "https://github.com/mmanikandan281/Job-agent",
+
+  },
+  {
+    id : "04",
+    title:"IDAM-PAM Platform",
+    category: "Identity and Access Management",
+    description:"IDAM-PAM is a secure Identity and Access Management platform that provides robust authentication, authorization, and user management features. It offers role-based access control, multi-factor authentication, and a user-friendly interface for managing permissions and ensuring data security across applications.",
+    stack : ["Golang", "React.js", "PostgreSQL", "Docker", "Typescript"],
+    image: projectIdam,
+    liveUrl: "https://github.com/mmanikandan281/idam-pam-capstone",
+    githubUrl: "https://github.com/mmanikandan281/idam-pam-capstone",
+
+  },
+  {
+    id : "05",
+    title: "Expense Tracker",
+    category: "React Application",
+    description: "A personal expense tracker built with React that allows users to manage their finances effectively. The app features a user-friendly interface for adding, editing, and deleting expenses, as well as visual charts to track spending patterns over time.",
+    stack: ["React.js", "CSS", "Javascript", "Chart.js", "TypeScript","supabase"],
+    image: projectTwo,
+    liveUrl: "https://expense-tracker-seven-lovat-35.vercel.app/",
+    githubUrl :"https://github.com/mmanikandan281/Expense-Tracker",
+  },
+  {
+    id: "06",
     title: "Resume Ranking System",
     category: "Machine Learning",
     description:
@@ -75,18 +109,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Resume-Ranking-System",
   },
   {
-    id: "04",
-    title: "E-commerce Website",
-    category: "React Application",
-    description:
-      "This is a fully functional eCommerce website built using React. The application allows users to browse products, view details, manage a shopping cart, and apply theme changes. The project utilizes React Router for navigation, Bootstrap for responsive design, and integrates a context API for theme management.",
-    stack: ["React.js", "CSS", "Javascript"],
-    image: projectTwo,
-    liveUrl: "https://github.com/mmanikandan281/E-commerce-website",
-    githubUrl: "https://github.com/mmanikandan281/E-commerce-website",
-  },
-  {
-    id: "05",
+    id: "07",
     title: "Tic Tac Toe Game",
     category: "React Game",
     description:
@@ -97,7 +120,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Tic-Tac-Toe",
   },
   {
-    id: "06",
+    id: "08",
     title: "Intelligent Pothole Detection System",
     category: "Computer Vision",
     description:
@@ -108,7 +131,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Intelligent-Pothole-Detection-System",
   },
   {
-    id: "07",
+    id: "09",
     title: "AI-Based Fire Detection System",
     category: "Deep Learning",
     description:
@@ -119,7 +142,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Fire-Detection",
   },
   {
-    id: "08",
+    id: "10",
     title: "Sign Language Detection Model",
     category: "Deep Learning",
     description:
@@ -130,7 +153,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Sign-Language-Detection",
   },
   {
-    id: "09",
+    id: "11",
     title: "Music Player Using Python",
     category: "Desktop Application",
     description:
@@ -141,7 +164,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/MUSIC-PLAYER-USING-PYTHON",
   },
   {
-    id: "10",
+    id: "12",
     title: "Lane Detection using OpenCV",
       category: "Computer Vision",
       description:
@@ -152,7 +175,7 @@ const projects = [
       githubUrl: "https://github.com/mmanikandan281/Lane-Line-detection",
     },
   {
-    id: "11",
+    id: "13",
     title: "Text-to-Music Generator",
     category: "Generative AI",
     description:
@@ -163,7 +186,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Text-to-music-Generator",
   },
     {
-    id: "12",
+    id: "14",
     title: "Recipe Finder App",
     category: "Frontend",
     description:
@@ -174,7 +197,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Food-recipe-app",
   },
   {
-    id: "13",
+    id: "15",
     title: "Puzzle Game",
     category: "Python Game",
     description:
@@ -185,7 +208,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/Puzzle-Game",
   },
   {
-    id: "14",
+    id: "16",
     title: "Word Hunt",
     category: "Frontend",
     description:
@@ -196,7 +219,7 @@ const projects = [
     githubUrl: "https://github.com/mmanikandan281/word-hunt",
   },
     {
-    id: "15",
+    id: "17",
     title: "Fake News Detection",
     category: "Natural Language Processing",
     description:

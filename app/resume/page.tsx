@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, GraduationCap, Briefcase, Code2, User, Award } from "lucide-react";
 import Container from "@/components/Container";
+import { describe } from "node:test";
+import { Certificate } from "crypto";
+import { Description } from "@radix-ui/react-toast";
 
 const tabMenu = [
   { title: "Internships", value: "internships", icon: Briefcase },
@@ -19,6 +22,21 @@ const tabContent = {
   internships: {
     title: "Internships",
     items: [
+      {
+        role: "Software Development Intern",
+        company: "Assimilate Technologies Pvt Ltd (Pune)",
+        period: "Sep 2025 - Mar 2026",
+        description:
+          "As a Software Development Intern at Assimilate Technologies, Built secure Go microservices with gRPC and REST APIs for an enterprise IAM/cybersecurity platform. Developed a real-time Policy Engine using PostgreSQL and integrated backend services with frontend workflows via gRPC-Gateway.",
+        highlights: [
+          "Software Development",
+          "Golang",
+          "Gin",
+          "gRPC",
+          "REST APIs",
+          "PostgreSQL",
+        ],
+      },
       {
         role: "Machine Learning Intern",
         company: "Cognifyz Technologies (Remote)",
@@ -103,15 +121,35 @@ const tabContent = {
         ],
       },
       {
-        name: "Frontend Development",
+        name: "Full Stack Development",
         description:
-          "Experienced in building responsive and interactive user interfaces using modern frontend technologies. Skilled in translating design concepts into functional applications with a focus on performance and user experience.",
+          "Experienced in building complete web applications from frontend to backend, ensuring seamless integration and optimal performance.",
         skills: [
           "React",
           "Html & Css",
           "TypeScript",
-          "Tailwind CSS",
           "Javascript",
+          "Django",
+          "Python",
+          "PostgreSQL",
+          "supabase",
+          "REST APIs",
+        ],
+      },
+      {
+        name: "Software Development",
+        description:
+          "Skilled in designing and implementing software solutions using programming languages and frameworks to solve complex problems and enhance user experience.",
+        skills: [
+          "Golang", 
+          "Python", 
+          "Django", 
+          "REST APIs", 
+          "Gin",
+          "gRPC",
+          "PostgreSQL",
+          "microservices",
+
         ],
       },
       {
@@ -132,7 +170,7 @@ const tabContent = {
         name: "Tools & Others",
         description:
           "Experienced in utilizing various platforms and tools to enhance productivity and collaborate on projects.",
-        skills: ["Git", "Google Colab", "HackerRank", "LinkedIn", "Kaggle"],
+        skills: ["Git", "jira", "supabase", "Docker", "Google Colab", "HackerRank", "LinkedIn", "Kaggle"],
       },
     ],
   },
@@ -171,18 +209,27 @@ const tabContent = {
   },
   about: {
     title: "About Me",
-    bio: "I am a passionate machine learning and front-end developer with a strong foundation in building innovative solutions. I have hands-on experience in developing user-centric web applications using modern frontend technologies like React and JavaScript, and expertise in designing and deploying machine learning models.",
+    bio: "I am a passionate Machine Learning & Software Engineer with hands-on experience building full-stack applications, secure backend systems, and AI-powered solutions. I specialize in React, Go, and TensorFlow — crafting everything from gRPC microservices and policy engines to intelligent, data-driven web apps.",
     interests: [
       "Machine Learning",
-      "Frontend Development",
-      "Data Science",
+      "Backend Development",
+      "Software Development",
+      "Full Stack Development",
       "Tech Blogging",
     ],
-    languages: ["Malayalam (Native)", "English (Fluent)"],
+  languages: ["Malayalam (Native)", "English (Fluent)", "Hindi (Beginner)"],
   },
   certificates: {
     title: "Certificates",
     items: [
+      {
+        certificate: "Artificial Intelligence and Data Science",
+        institution: "IIT Hyderabad and MakeInterns",
+        period: "Oct 2025",
+        description:
+          "Completed the 'Artificial Intelligence and Data Science' Training program by IIT Hyderabad and MakeInterns, covering over 300 days of training in AI concepts, data science techniques, and practical applications.",
+        certificate_id: "21BCA030"
+      },
       {
         certificate: "Career Essentials in Data Analysis",
         institution: "Microsoft and LinkedIn",

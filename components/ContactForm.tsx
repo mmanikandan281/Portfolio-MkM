@@ -183,9 +183,10 @@ const ContactForm = () => {
                 <SelectContent className="bg-bodyColor text-white border-white/20">
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="web-development">Web Development</SelectItem>
-                    <SelectItem value="frontend-development">Frontend Development</SelectItem>
+                    <SelectItem value="backend-development">Backend Development</SelectItem>
+                    <SelectItem value="frontend-development">Software Development</SelectItem>
                     <SelectItem value="ml-development">Machine Learning Model Development</SelectItem>
+                    <SelectItem value="web-development">Web Development</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>

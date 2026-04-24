@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
-    "SI am a Machine Learning & Front-End Engineer skilled in integrating AI models with modern web technologies. I specialize in React, ML and TensorFlow, creating intelligent, user-friendly applications that enhance data-driven decision-making.";
+    "SMachine Learning & Software Engineer specializing in full-stack development, backend systems, and AI integration. I build intelligent, user-friendly applications that bridge ML models with modern web technologies.";
   const { displayedText, isComplete } = useTypewriter(description, 30);
 
   useEffect(() => {
